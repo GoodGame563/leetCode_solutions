@@ -4,13 +4,14 @@ class Solution:
         total_unique = len(set(nums))
         result = 0
         for left in range(n):
-            seen = set()
+            see = set()
             for right in range(left, n):
-                seen.add(nums[right])
-                if len(seen) == total_unique:
-                    result+=1
+                see.add(nums[right])
+                if len(see) == total_unique:
+                    result+=n-right
+                    break
         return result 
 
 
 
-print(Solution().countCompleteSubarrays(nums = [5,5,5,5]))
+print(Solution().countCompleteSubarrays(nums = [1,3,1,2,2]))
