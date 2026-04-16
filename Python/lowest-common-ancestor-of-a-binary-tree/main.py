@@ -41,9 +41,6 @@ class Solution:
         for i in range(min(len(p_stack), len(q_stack))+1):
             if len(p_stack) <= i or len(q_stack) <= i or p_stack[i] != q_stack[i]:
                 return p_stack[i-1]
-                
-
-
         return root
 
 q = TreeNode(4)
